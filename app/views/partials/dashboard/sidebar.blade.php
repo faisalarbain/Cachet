@@ -44,6 +44,11 @@
                     <i class="icons ion-ios-keypad"></i> {{ Lang::get('cachet.dashboard.components') }}
                 </a>
             </li>
+            <li class="{{ Request::is('dashboard/team') ? 'active' : '' }}">
+                <a href="{{ URL::route('dashboard.team') }}">
+                    <i class="icons ion-ios-people"></i> {{ Lang::get('cachet.dashboard.team') }}
+                </a>
+            </li>
             {{-- <li class="{{ Request::is('dashboard/metrics') ? 'active' : '' }}">
                 <a href="{{ URL::route('dashboard.metrics') }}">
                     <i class="ion ion-stats-bats"></i> {{ Lang::get('cachet.dashboard.metrics') }}

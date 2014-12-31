@@ -18,6 +18,18 @@ class DashboardController extends Controller
     }
 
     /**
+     * Shows the team members view.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showTeamView()
+    {
+        return View::make('dashboard.team')->with([
+            'pageTitle' => 'Team Members - Dashboard',
+        ]);
+    }
+
+    /**
      * Shows the metrics view.
      *
      * @return \Illuminate\View\View
