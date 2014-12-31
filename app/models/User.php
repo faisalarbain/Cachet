@@ -57,4 +57,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface
             $size
         );
     }
+
+    /**
+     * Returns whether a user is at admin level.
+     *
+     * @return bool
+     */
+    public function getIsAdminAttribute() {
+        return (int) $this->level === 1;
+    }
 }
