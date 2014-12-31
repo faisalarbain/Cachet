@@ -25,6 +25,7 @@ class DashboardController extends Controller
     public function showTeamView()
     {
         $team = User::all();
+
         return View::make('dashboard.team')->with([
             'pageTitle'   => 'Team Members - Dashboard',
             'teamMembers' => $team,
